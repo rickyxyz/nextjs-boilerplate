@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --check --ignore-path .gitignore .",
-    "prettier:fix": "prettier --write --ignore-path .gitignore ."
+    "prettier:fix": "prettier --write --ignore-path .gitignore .",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "next": "14.0.2",
@@ -16,6 +17,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@playwright/test": "^1.39.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -24,6 +26,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-playwright": "^0.18.0",
     "eslint-plugin-prettier": "^5.0.1",
     "lefthook": "^1.5.2",
     "postcss": "^8",
