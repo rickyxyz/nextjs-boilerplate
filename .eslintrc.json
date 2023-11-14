@@ -4,6 +4,7 @@
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "next/core-web-vitals",
+    "plugin:storybook/recommended",
     "plugin:prettier/recommended"
   ],
   "plugins": ["@typescript-eslint", "prettier"],
@@ -16,13 +17,32 @@
   "rules": {
     "no-console": "warn",
     "no-debugger": "warn",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-confusing-void-expression": [
+      "error",
+      {
+        "ignoreArrowShorthand": true
+      }
+    ]
   },
   "overrides": [
     // Configuration for e2e testing (Playwright)
     {
       "files": ["**/*.spec.ts"],
       "extends": ["plugin:playwright/recommended"]
+    },
+    // Configuration for Storybook
+    {
+      "files": ["*.stories.*"],
+      "extends": ["plugin:storybook/recommended"],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ]
+      }
     }
   ]
 }
