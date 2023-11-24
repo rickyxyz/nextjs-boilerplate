@@ -9,9 +9,10 @@
     "lint": "next lint",
     "prettier": "prettier --check --ignore-path .gitignore .",
     "prettier:fix": "prettier --write --ignore-path .gitignore .",
+    "test:unit": "jest",
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "next": "14.0.2",
@@ -29,6 +30,7 @@
     "@storybook/nextjs": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
+    "@testing-library/jest-dom": "^6.1.4",
     "@types/jest": "^29.5.10",
     "@types/node": "^20",
     "@types/react": "^18",

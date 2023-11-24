@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
@@ -36,6 +40,7 @@ const customJestConfig = {
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/tests/',
+    '<rootDir>/__tests__/e2e/',
     '<rootDir>/__checks__/',
   ],
 };
